@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, minium-scale=1, maximum-scale=1">
+	<title>2016年度报告</title>
+</head>
+<style type="text/css">
+	body{
+		margin: 0;
+		padding: 0;
+		background-color: #000; 
+		font-size: 12px;
+	}
+	.iphone{
+		width: 340px;
+		height: 540px;
+		background-color: #fff;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -170px;
+		margin-top: -270px;
+	}
+
+</style>
+<script type="text/javascript" src="../js/lib/jquery.js"></script>
+<script type="text/javascript" src="../js/H5ComponentBase.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/H5ComponentBase.css">
+<!--引入散点图资源-->
+<script type="text/javascript" src="../js/H5ComponentPoint.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/H5ComponentPoint.css">
+<script type="text/javascript">
+	
+</script>
+<body>
+<!--   用于开发测试 H5ComponentBase 对象（基本的图文组件） -->
+	<div class="iphone">
+		
+	</div>
+	<script type="text/javascript">
+		var cfg = {
+			type : 'point',
+			//text : '文本内容',
+			width : 300,
+			height : 300,
+            data: [
+                ['A项', 0.4, 'green'],
+                ['B项', 0.2, 'yellow',    0, '-60%'],
+                ['C项', 0.2, 'red', '-50px', '100%'],
+                ['D项', 0.3, 'blue','110px', '110%']
+            ],
+            css:{
+                //left:50,
+                bottom:'40%',
+                opacity:1
+            },
+            animateIn:{ bottom:'40%',opacity:1 },
+            animateOut:{ bottom:'40%',opacity:0.5 },
+            center : true,
+        };
+
+        //h5是一个组件
+		var h5 = new H5ComponentPoint('myName',cfg);
+
+		$('.iphone').append(h5);
+
+        var load = true;
+        $('body').click(function(){
+            load = !load;
+            $('.h5_component').trigger( load ? 'onLeave': 'onLoad');
+        })
+	</script>
+</body>
+</html>
