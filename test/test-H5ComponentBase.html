@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, minium-scale=1, maximum-scale=1">
+	<title>2016年度报告</title>
+</head>
+<style type="text/css">
+	body{
+		margin: 0;
+		padding: 0;
+		background-color: #000; 
+		font-size: 12px;
+	}
+	.iphone{
+		width: 340px;
+		height: 540px;
+		background-color: #fff;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -170px;
+		margin-top: -270px;
+	}
+
+</style>
+<script type="text/javascript" src="../js/lib/jquery.js"></script>
+<script type="text/javascript" src="../js/H5ComponentBase.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/H5ComponentBase.css">
+<script type="text/javascript">
+	
+</script>
+<body>
+<!--   用于开发测试 H5ComponentBase 对象（基本的图文组件） -->
+	<div class="iphone">
+		
+	</div>
+	<script type="text/javascript">
+		var cfg = {
+			type : 'base',
+			//text : '文本内容',
+			width : 514,
+			height : 306,
+            css:{
+                //left:50,
+                bottom:0,
+                opacity:0
+            },
+            animateIn:{ bottom:80,opacity:1 },
+            animateOut:{ bottom:0,opacity:0 },
+            center : true,
+            bg : './p1_people.png'
+        };
+
+        //h5是一个组件
+		var h5 = new H5ComponentBase('myName',cfg);
+
+		$('.iphone').append(h5);
+
+        var load = true;
+        $('body').click(function(){
+            load = !load;
+            $('.h5_component').trigger( load ? 'onLeave': 'onLoad');
+        })
+	</script>
+</body>
+</html>
