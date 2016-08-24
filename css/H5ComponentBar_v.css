@@ -1,0 +1,12 @@
+/*柱状图组件样式*/
+.h5_component_bar{
+}
+
+.h5_component_bar .rate{
+    background-color: #ccc;
+    width: 10px;
+
+}
+.h5_component_bar .line{
+    float: right;
+}

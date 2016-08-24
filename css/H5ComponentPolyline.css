@@ -1,0 +1,10 @@
+/*折线图组件样式*/
+.h5_component_polyline{
+
+}
+.h5_component_polyline .canvas{
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
