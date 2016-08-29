@@ -1,27 +1,20 @@
-/*柱图组件对象*/
-var H5ComponentBar = function( name, cfg ){
-	var component = new H5ComponentBase( name, cfg );
+/* 垂直柱图组件对象 */
 
-    $.each(cfg.data, function(index, item){
+var H5ComponentBar_v =function ( name, cfg ) {
+  var component =  new H5ComponentBar( name ,cfg );
 
-        var line = $('<div class="line">');
-        var name = $('<div class="name">');
-        var rate = $('<div class="rate">');
-        var per = $('<div class="per">');
+  var width = ( 100 / cfg.data.length ) >> 0 ;
+  component.find('.line').width( width + '%');
+  
+  $.each( component.find('.rate') ,function(){
+      var w = $(this).css('width');
+      $(this).height(w).width('');
 
-        var height = item[1]*100 +'%';
+  });
 
-        rate.html('<div class="bg"></div>')
-        rate.css('height', height);
+  $.each( component.find('.per'),function(){
+      $(this).appendTo( $(this).prev() ) ;
+  })
 
-        name.text( item[0] );
-        per.text(height);
-
-        line.append(name).append(rate).append(per);
-        component.append(line);
-
-    })
-
-
-    return component;
-};
+  return component;
+}
