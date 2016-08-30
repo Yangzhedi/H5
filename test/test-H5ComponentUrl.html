@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, minium-scale=1, maximum-scale=1">
 	<title>2016年度报告</title>
 </head>
 <style type="text/css">
@@ -25,7 +25,6 @@
 
 </style>
 <script type="text/javascript" src="../js/lib/jquery.js"></script>
-<script type="text/javascript" src="../js/H5ComponentBase.js"></script>
 <script type="text/javascript" src="../js/H5ComponentUrl.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/H5ComponentBase.css">
 <script type="text/javascript">
@@ -38,40 +37,29 @@
 	</div>
 	<script type="text/javascript">
 		var cfg = {
-			type : 'base',
+			type : 'url',
 			text : '文本内容',
-			width : 514,
-			height : 306,
             css:{
-                //left:50,
-                bottom:0,
-                opacity:0
+                left:20,
+                bottom:30,
+                //opacity:0
             },
-            animateIn:{ bottom:80,opacity:1 },
-            animateOut:{ bottom:0,opacity:0 },
-            center : true,
-			url:{
-				type : 'url',
-				text : '文本内容',
-				/*css:{
-				 left:20,
-				 bottom:30,
-				 },*/
-				decoration:false
-			}
-            //bg : './p1_people.png'
+            //animateIn:{ bottom:80,opacity:1 },
+            //animateOut:{ bottom:0,opacity:0 },
+            //center : true,
+			decoration:false
         };
 
         //h5是一个组件
-		var h5 = new H5ComponentBase('myName',cfg);
+		var h5 = new H5ComponentUrl('myUrl',cfg);
 
 		$('.iphone').append(h5);
 
-        var load = true;
+        /*var load = true;
         $('body').click(function(){
             load = !load;
             $('.h5_component').trigger( load ? 'onLeave': 'onLoad');
-        })
+        })*/
 	</script>
 </body>
 </html>
