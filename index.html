@@ -40,7 +40,7 @@
 
 			h5
 				.addPage('face')
-					.addComponent('logo',{
+					/*.addComponent('logo',{
 						center:true,
 						width:395,
 						height:130,
@@ -48,8 +48,8 @@
 						css:{opacity:0},
 						animateIn:{top:100,opacity:1},
 						animateOut:{top:0,opacity:0},
-					})
-					.addComponent('slogan',{
+					})*/
+					/*.addComponent('slogan',{
 						center:true,
 						width:365,
 						height:99,
@@ -58,7 +58,7 @@
 						animateIn:{left:'50%',opacity:1},
 						animateOut:{left:'0%',opacity:0},
 						delay:500
-					})
+					})*/
 					.addComponent('face_img_left',{
 						width:370,
 						height:493,
@@ -82,10 +82,29 @@
 						width:160,
 						height:160,
 						bg:'imgs/icebear1.png',
-						css:{opacity:0,top:200},
-						animateIn:{left:80,opacity:1},
-						animateOut:{left:0,opacity:0},
+						css:{opacity:0,top:'30%',
+							left:'35%',marginLeft:'-40px'
+						},
+						animateIn:{opacity:1},
+						animateOut:{opacity:0},
 						delay:1000
+					})
+					.addComponent('slogan yang',{
+						//center:true,
+						fontFamily:'华文细黑',
+						width:300,
+						height:160,
+						text:'杨小事er',
+						css:{opacity:0,top:'30%',
+							fontSize:'25px',
+							paddingTop:'30px',
+							color:'#fff',
+							left:'70%',
+							marginLeft:'-75px'
+						},
+						animateIn:{opacity:1},
+						animateOut:{opacity:0},
+						delay:500
 					})
 				.addPage()
 					.addComponent('caption',{text:'核心理念'})
@@ -105,17 +124,17 @@
 						center:true,
 						width:481,
 						height:295,
-						bg:'imgs/description_bg.gif',
+						bg:'imgs/description_bg.png',
 						css:{
 							opacity:0,
-							padding:'15px 10px 10px 10px',
-							color:'#fff',
-							fontSize:'15px',
-							lineHeight:'18px',
+							padding:'20px 10px 10px 10px',
+							color:'#000',
+							fontSize:'18px',
+							lineHeight:'20px',
 							textAlign:'justify',
 							top:240
 						},
-						text:'2013年，IT教育网的诞生引领中国IT职业从教育进入新时代；高质量实战课程、全新教学模式、实时互动学习，以领先优势打造行业品牌；迄今为止，IT教育网已成为中国规模最大、互动性最高的IT技能学习平台。',
+						text:'2013年，IT教育网的诞生引领中国IT职业从教育进入新时代；迄今为止，IT教育网已成为中国规模最大、互动性最高的IT技能学习平台。',
 						animateIn:{opacity:1,top:190},
 						animateOut:{opacity:0,top:240},
 						delay:1000
