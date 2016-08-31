@@ -23,6 +23,11 @@ var H5 = function(){
         }
         this.el.append(page);
         this.page.push( page );
+        // 添加固定的组件
+        if( typeof this.whenAddPage === 'function' ){
+            this.whenAddPage();
+        }
+
         return this;
     };
     //新增一个组件
@@ -47,7 +52,7 @@ var H5 = function(){
     };
 
     /*H5对象初始化*/
-    this.loader = function(){
+    this.loader = function( firstPage ){
         this.el.fullpage({
             onLeave:function(index, nextIndex, direction){
                 $(this).find('.h5_component').trigger('onLeave');
@@ -66,6 +71,10 @@ var H5 = function(){
         });*/
         this.page[0].find('.h5_component').trigger('onLoad');
         this.el.show();
+
+        if(firstPage){
+            $.fn.fullpage.moveTo( firstPage );
+        }
     };
     return this;
 };

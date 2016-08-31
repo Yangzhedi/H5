@@ -14,4 +14,5 @@
 以上都是通过imooc网实战课程习得
 以下是个人复用拓展
 ***
-### H5ComponentUrl.js :链接组件
+### H5ComponentUrl.js  :链接组件
+可以放在base组件中，也可独立出来。
