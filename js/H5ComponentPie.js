@@ -102,7 +102,7 @@ var H5ComponentPie = function( name, cfg ) {
 
     // 加入一个底图层
 
-    ctx.fillStyle = '#eee';
+    ctx.fillStyle = 'rgba(230, 230, 230, 1)';
     ctx.strokeStyle = '#eee';
     ctx.lineWidth = 1;
 
