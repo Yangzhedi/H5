@@ -24,13 +24,13 @@ body{
 }
 
 .h5_component_name_caption{
-    background-image: url(../imgs/page_caption_bg.png);
+    background-image: url(../imgs/caption.png);
     width: 283px;
     height: 160px;
     text-align: center;
     line-height: 140px;
-    font-size: 20px;
-    color: #fff;
+    font-size: 24px;
+    color: #000;
 }
 .h5_component_name_back{
     top: 30px;
