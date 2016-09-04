@@ -126,6 +126,59 @@ $(function(){
         })
         .addPage()
             .addComponent('caption',{text:'这只是个标题'})
+            .addComponent('text_big',{
+                width:500,
+                height:30,
+                center:true,
+                text:'可以做图文展示页面，也可以做图表展示页面。',
+                css:{
+                    opacity:0,textAlign:'center',color:'#5D5D5D',fontSize:'22px', fontWeight:'700',
+                    fontFamily:'Tahoma,Arial,”Helvetica Neue“,”Hiragino Sans GB”,Simsun,sans-self'
+                },
+                animateIn:{opacity:1,top:120},
+                animateOut:{opacity:0,top:240},
+            })
+            .addComponent('text_big',{
+                width:550,
+                height:30,
+                center:true,
+                text:'这里可以放很多很多的文字!',
+                css:{
+                    opacity:0,textAlign:'center',color:'#5D5D5D',fontSize:'26px', fontWeight:'700',
+                    fontFamily:'Tahoma,Arial,”Helvetica Neue“,”Hiragino Sans GB”,Simsun,sans-self'
+                },
+                animateIn:{opacity:1,top:'40%'},
+                animateOut:{opacity:0,top:'30%'},
+                delay:400
+            })
+            .addComponent('text_big',{
+                width:550,
+                height:30,
+                center:true,
+                text:'这里就以放置图片巴blabla的~',
+                css:{
+                    opacity:0,textAlign:'center',color:'#5D5D5D',fontSize:'20px', fontWeight:'500',
+                    fontFamily:'Tahoma,Arial,”Helvetica Neue“,”Hiragino Sans GB”,Simsun,sans-self'
+                },
+                animateIn:{opacity:1,bottom:210},
+                animateOut:{opacity:0,bottom:0},
+                delay:800
+            })
+            .addComponent('icebear',{
+                center:true,
+                width:300,
+                height:300,
+                bg:'imgs/icebear1.png',
+                css:{
+                    opacity:0,
+                    bottom:0
+                },
+                animateIn:{opacity:1,bottom:40},
+                animateOut:{opacity:0,bottom:0},
+                delay:800
+            })
+        .addPage('polyline')
+            .addComponent('caption',{text:'这又是个标题'})
             .addComponent('polyline',{
                 type:'polyline',
                 data:[['array[0]',.4,'#ff7676'],['array[1]',.2],['array[2]',.3,'blue'],['array[3]',.1]],
@@ -147,7 +200,7 @@ $(function(){
                 animateIn:{ opacity:1},
                 animateOut:{ opacity:0}
             })
-        .addPage()
+        .addPage('pie')
             .addComponent('caption',{text:'这还是个标题'})
             .addComponent('pie',{
                 type:'pie',
@@ -174,10 +227,9 @@ $(function(){
                 animateIn:{ opacity:1},
                 animateOut:{ opacity:0}
             })
-        .addPage() //bar（bar_v）
+        .addPage('bar') //bar（bar_v）
             .addComponent('caption',{text:'前端开发课程'})
-            .addComponent('bar',
-                {
+            .addComponent('bar', {
                     type : 'bar',
                     width : 530,
                     height : 600,
@@ -204,11 +256,69 @@ $(function(){
                 animateIn:{ opacity:1},
                 animateOut:{ opacity:0}
             })
-        
         .addPage()
             .addComponent('caption',{text:'这还是个标题'})
-        .addPage()
+            .addComponent('radar',{
+                type : 'radar',
+                width : 400,
+                height : 400,
+                data:[
+                    ['null' , .9  ,'#5395FB'],
+                    ['undefined' , .8 ],
+                    ['[ ]' , .7  ],
+                    ['NaN' , .6  ],
+                    ['\' \'' , .5 ]
+                ],
+                css : {
+                    top:100,
+                    opacity:0
+                },
+                animateIn:{
+                    opacity:1,
+                    top:200,
+                },
+                animateOut:{
+                    opacity:0,
+                    top:100,
+                },
+                center : true,
+            })
+            .addComponent('msg',{
+                text:'这 这 这是雷达 雷达图',
+                css:{
+                    opacity:0,bottom:80,fontSize:'20px',fontWeight:700,
+                    textAlign:'center',width:'100%',color:'#5395FB'
+                },
+                animateIn:{ opacity:1},
+                animateOut:{ opacity:0},
+                delay:800
+            })
+        .addPage('point')
             .addComponent('caption',{text:'这还是个标题'})
+            .addComponent('point',{
+                type : 'point',
+                width : 300,
+                height : 300,
+                data:[
+                    ['壹' , .4  ,'#ff7676'],
+                    ['贰' , .2  ,'#ffa3a4', '-20%' ,'-60%'],
+                    ['叁' , .3  ,'#99c1ff', '50%' ,'-120%']
+                ],
+                css : {
+                    bottom:'20%'
+                },
+                center : true,
+            })
+            .addComponent('msg',{
+                text:'这 这 这是散点 散点图',
+                css:{
+                    opacity:0,bottom:80,fontSize:'20px',fontWeight:700,
+                    textAlign:'center',width:'100%',color:'#5395FB'
+                },
+                animateIn:{ opacity:1},
+                animateOut:{ opacity:0},
+                delay:800
+            })
         .addPage('tail')
             .addComponent('logo',{
             center:true,
@@ -247,5 +357,5 @@ $(function(){
                 $.fn.fullpage.moveTo( 1 )
             }
         })
-        .loader(5);
+        .loader();
 });
