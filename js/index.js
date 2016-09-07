@@ -266,8 +266,8 @@ $(function(){
                     ['null' , .9  ,'#5395FB'],
                     ['undefined' , .8 ],
                     ['[ ]' , .7  ],
-                    ['NaN' , .6  ],
-                    ['\' \'' , .5 ]
+                    ['\' \'' , .6  ],
+                    ['NaN' , .5 ]
                 ],
                 css : {
                     top:100,
@@ -321,14 +321,15 @@ $(function(){
             })
         .addPage('tail')
             .addComponent('logo',{
-            center:true,
-            width:191,
-            height:194,
-            bg:'imgs/twoweima.jpg',
-            css:{top:220,opacity:0},
-            animateIn:{opacity:1,top:210},
-            animateOut:{opacity:0,top:240},
-        })
+                type:'img',
+                center:true,
+                width:191,
+                height:194,
+                src:'imgs/twoweima.jpg',
+                css:{top:220,opacity:0},
+                animateIn:{opacity:1,top:210},
+                animateOut:{opacity:0,top:240},
+            })
             .addComponent('slogan',{
             center:true,
             width:314,

@@ -57,19 +57,17 @@ var H5 = function(){
             case 'bar_v' :
                 component = new H5ComponentBar_v(name,cfg);
                 break;
-
             case 'radar' :
                 component = new H5ComponentRadar(name,cfg);
-                break;
-
-            case 'pie' :
-                component = new H5ComponentPie(name,cfg);
                 break;
             case 'ring' :
                 component = new H5ComponentRing(name,cfg);
                 break;
             case 'point' :
                 component = new H5ComponentPoint(name,cfg);
+                break;
+            case 'img' :
+                component = new H5ComponentImg(name,cfg);
                 break;
             default:
         }

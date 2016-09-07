@@ -3,7 +3,7 @@
  */
 var res = [
     'Base','Bar','Bar_v','Point','Polyline',
-    'Radar','Pie','Ring'
+    'Radar','Pie','Ring','Img'
 ];
 var html = [];
 for(s in res){
