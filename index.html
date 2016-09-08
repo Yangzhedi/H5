@@ -8,17 +8,28 @@
 	<script type="text/javascript" src="js/lib/jquery.js"></script>
 	<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/lib/jquery.fullPage.js"></script>
-	<!-- 载入H5 相关资源 -->
-	<script type="text/javascript" src="js/Load.js"></script>
+
+	<script type="text/javascript" src="js/H5_loading.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/H5_loading.css">
 	<!-- H5对象：进行内容管理 -->
 	<script type="text/javascript" src="js/H5.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/H5.css">
 	<!-- 主要逻辑的样式 -->
 	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<!-- 主要逻辑 -->
-	<script type="text/javascript" src="js/index.js"></script>
+
 </head>
 <body>
+<div class="loading">
+	<div class="double-bounce1"></div>
+	<div class="double-bounce2"></div>
+	<div id="rate">0%</div>
+</div>
 
+
+<!-- 载入H5 相关资源 -->
+<script type="text/javascript" src="js/Load.js"></script>
+<!-- 主要逻辑 -->
+<script type="text/javascript" src="js/index.js"></script>
 </body>
+
 </html>

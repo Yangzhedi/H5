@@ -358,5 +358,5 @@ $(function(){
                 $.fn.fullpage.moveTo( 1 )
             }
         })
-        .loader();
+        .loader([ 'imgs/tail_back.png','imgs/tail_share.png','imgs/tail_slogan.png' ] );
 });
