@@ -50,9 +50,10 @@ $(function(){
         })
             .addComponent('slogan',{
             //center:true,
+            type:'img',
             width:160,
             height:160,
-            bg:'imgs/icebear1.png',
+            src:'imgs/icebear1.png',
             css:{opacity:0,top:'30%',
                 left:'35%',marginLeft:'-40px'
             },
@@ -358,5 +359,6 @@ $(function(){
                 $.fn.fullpage.moveTo( 1 )
             }
         })
-        .loader([ 'imgs/tail_back.png','imgs/tail_share.png','imgs/tail_slogan.png' ] );
+        .loader([ 'imgs/logo.png','imgs/icebear1.png','imgs/face_img_left.png','imgs/icebear1.png',
+            'imgs/tail_back.png','imgs/tail_share.png','imgs/tail_slogan.png' ] );
 });
